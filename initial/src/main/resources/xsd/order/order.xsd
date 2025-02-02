@@ -1,0 +1,15 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:common="http://samples.tsobss.btc.com/common"
+           targetNamespace="http://samples.tsobss.btc.com/order"
+           elementFormDefault="qualified">
+
+    <xs:import namespace="http://samples.tsobss.btc.com/common" schemaLocation="../common.xsd"/>
+
+    <xs:complexType name="OrderData">
+        <xs:sequence>
+            <xs:element name="name" type="common:Name"/>
+            <xs:element name="value" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

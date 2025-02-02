@@ -1,0 +1,24 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:order="http://samples.tsobss.btc.com/order"
+           targetNamespace="http://samples.tsobss.btc.com/order/webservice"
+           elementFormDefault="qualified">
+
+    <xs:import namespace="http://samples.tsobss.btc.com/order" schemaLocation="order.xsd"/>
+
+    <xs:element name="GetOrderRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="GetOrderResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="data" type="order:OrderData"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

@@ -1,4 +1,4 @@
-package com.example.producingwebservice;
+package com.btc.tsobss.samples;
 
 import org.junit.jupiter.api.Test;
 
