@@ -39,8 +39,8 @@ mvn clean install
 mvn spring-boot:run
 ```
 
-We have implemented a workaround in SpringWsConfig:90 (FixedClasspathUriResolver class) which can be activated in “SpringWsConfig:74”. This demonstrates that the fallback to resolving the path relatively works like a charm!
+We have implemented a workaround in ```SpringWsConfig:90``` (```FixedClasspathUriResolver``` class) which can be activated in ```SpringWsConfig:74```. This demonstrates that the fallback to resolving the path relatively works like a charm!
 It solves this problem by catching the exception and executing the else section of the if statement which then then manages to resolve the storage location relatively.
 
-There is also a “TomcatRequestUtilTest” that demonstrates the behavior of the RequestUtil class which is used deep inside the call of ```resource.exists()```
+There is also a ```TomcatRequestUtilTest``` that demonstrates the behavior of the RequestUtil class which is used deep inside the call of ```resource.exists()```
 
